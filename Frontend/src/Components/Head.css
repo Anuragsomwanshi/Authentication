@@ -1,0 +1,16 @@
+.header{
+    place-self: center;
+    /* border: 2px solid; */
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.homeimg{
+    width: 15rem;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 15px;
+    
+    
+    
+}
