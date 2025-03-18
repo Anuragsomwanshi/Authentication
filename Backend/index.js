@@ -9,6 +9,11 @@ const app = express();
 
 const port = process.env.PORT|| 4000
 
+// database connection
+
+
+
+    connectDB();
 
 const allowdorigins = ['http://localhost:5173',
   
@@ -32,5 +37,4 @@ app.get('/',(req,res)=>{
 })
 app.listen(port,()=>{
     console.log("server started at port: " ,port);
-    connectDB();
 });
