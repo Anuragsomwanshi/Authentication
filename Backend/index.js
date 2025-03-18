@@ -21,7 +21,7 @@ const connectDB = async ()=>{
 
 
 
-const allowdorigins = ['https://authentication-frontend-olive.vercel.app',
+const allowdorigins = ['https://authentication-one-flame.vercel.app',
   
 
 ]
