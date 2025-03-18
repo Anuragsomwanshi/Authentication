@@ -9,7 +9,7 @@ export const StoreContextProvider = (props)=>{
 
   axios.defaults.withCredentials = true // for cookies
 
-    const backendurl = 'http://localhost:4000'
+    const backendurl = 'https://authentication-backend-ebon.vercel.appgi'
     const [Login,setLogin]= useState(false);
     const [userdata,setUserData] = useState(false);
 
