@@ -21,16 +21,13 @@ const connectDB = async ()=>{
 
 
 
-const allowdorigins = ['https://authentication-one-flame.vercel.app',
-  
 
-]
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors(
     { 
-        origin: allowdorigins , 
+        origin: 'https://authentication-one-flame.vercel.app' , 
         credentials:true,
         method:["POST","GET"]
     }));
