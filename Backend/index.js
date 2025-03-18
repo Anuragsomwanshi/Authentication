@@ -9,7 +9,7 @@ const app = express();
 
 const port = process.env.PORT|| 4000
 
-const origin = ['https://authentication-frontend-orcin.vercel.app/']
+const origin = ['https://authentication-frontend-orcin.vercel.app']
 app.use(express.json());
 app.use(cookieParser());
 
