@@ -9,15 +9,15 @@ const app = express();
 
 const port = process.env.PORT|| 4000
 
-const origin = ['https://authentication-frontend-orcin.vercel.app']
+
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors(
     { 
-        origin:origin, 
+        origin:'https://authentication-frontend-orcin.vercel.app', 
         credentials:true,
-        method:["POST","GET"]
+        method:["POST","GET","PUT","DELETE"]
     }));
 app.use( '/api/auth',AuthRoutes);
 app.use('/api/user',userRouter);
