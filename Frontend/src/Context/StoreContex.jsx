@@ -9,7 +9,7 @@ export const StoreContextProvider = (props)=>{
 
   axios.defaults.withCredentials = true // for cookies
 
-    const backendurl = 'https://authentication-41va.onrender.com' || import.meta.env.BACKEND_URL
+    const backendurl = 'http://localhost:4000'
     const [Login,setLogin]= useState(false);
     const [userdata,setUserData] = useState(false);
 

@@ -9,13 +9,17 @@ const app = express();
 
 const port = process.env.PORT|| 4000
 
-const origin = ['http://localhost:5173.versal.app']
+
+const allowdorigins = ['http://localhost:5173',
+  
+
+]
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors(
     { 
-        origin:origin, 
+        origin: allowdorigins , 
         credentials:true,
         method:["POST","GET"]
     }));
