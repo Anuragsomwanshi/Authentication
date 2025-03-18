@@ -9,10 +9,16 @@ const app = express();
 
 const port = process.env.PORT|| 4000
 
-const origin = ['http://localhost:5173']
+const origin = ['http://localhost:5173.versal.app']
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin:origin, credentials:true}));
+
+app.use(cors(
+    { 
+        origin:origin, 
+        credentials:true,
+        method:["POST","GET"]
+    }));
 app.use( '/api/auth',AuthRoutes);
 app.use('/api/user',userRouter);
 
