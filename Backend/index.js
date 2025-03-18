@@ -2,7 +2,7 @@ import express from 'express'
 import cors from "cors"
 import 'dotenv/config';
 import cookieParser from 'cookie-parser';
-import connectDB from './config/Database.js'
+
 import AuthRoutes from './Routes/Auth.Routes.js'
 import userRouter from './Routes/User.Routes.js';
 const app = express();
@@ -12,8 +12,13 @@ const port = process.env.PORT|| 4000
 // database connection
 
 
+const connectDB = async ()=>{
+    await mongoose.connect(process.env.MONGODB_URL)
+    .then(console.log("Database connected "));
+}
 
-    connectDB();
+
+
 
 const allowdorigins = ['http://localhost:5173',
   
@@ -37,4 +42,5 @@ app.get('/',(req,res)=>{
 })
 app.listen(port,()=>{
     console.log("server started at port: " ,port);
+    connectDB();
 });
