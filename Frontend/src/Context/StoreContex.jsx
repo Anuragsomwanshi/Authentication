@@ -9,7 +9,7 @@ export const StoreContextProvider = (props)=>{
 
   axios.defaults.withCredentials = true // for cookies
 
-    const backendurl = 'https://authentication-nine-coral.vercel.app/' || import.meta.env.BACKEND_URL
+    const backendurl = 'https://authentication-nine-coral.vercel.app' || import.meta.env.BACKEND_URL
     const [Login,setLogin]= useState(false);
     const [userdata,setUserData] = useState(false);
 
